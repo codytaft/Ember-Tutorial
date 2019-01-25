@@ -3,3 +3,15 @@
   <h2>Welcome!</h2>
   <p>We hope you find exactly what you're looking for in place to stay</p>
 </div>
+
+{{#each this.model as |rental|}}
+<article class="listing">
+  <div class="details">
+    <h3>{{rental.title}}</h3>
+    <div class="detail owner"><span>Owner:</span> {{rental.owner}}</div>
+  </div>
+  <div class="detail type"><span>Type:</span> {{rental.category}}</div>
+  <div class="detail location"><span>Type:</span> {{rental.city}}</div>
+  <div class="detail bedrooms"><span>Type:</span> {{rental.bedrooms}}</div>
+</article>
+{{/each}}
